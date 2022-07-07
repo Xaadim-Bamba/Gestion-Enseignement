@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+        <head>
+                <meta charset="utf-8" />
+                <title>Enseignement supérieur Anjou</title>
+              
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+                
+                
+              <style>
+                                 footer {
+      background-color:  #505151
+
+;
+      color: white;
+      padding: 85px;
+    }
+    
+                                
+        
+    
+     @media screen and (max-width: 750px) {
+      .sidenav {
+        height: auto;
+        padding: 20px;
+      }
+  
+    .row.content {height: 500px}
+    
+  
+    .sidenav {
+      padding-top: 15px;
+      height: 100%;
+    }
+    
+  
+    footer {
+      color: white;
+      padding: 15px;
+    }
+    
+   
+      .row.content {height:auto;} 
+          .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    }
+        
+        
+  </style>
+        </head>
+        
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+          <div class="navbar-header">
+          <a class="navbar-brand" href="Accueil.html">Etablissements </a>
+          </div>
+          <ul class="nav navbar-nav">
+              <li class="active"><a href="Accueil.html"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
+              <li><a href="ListeEtablissement.html">Liste des établissements supérieur</a></li>
+          </ul>
+          
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="Contactez-nous.html"><span class="glyphicon glyphicon-user"></span> Contact</a></li>
+          </ul>
+           </div>
+      </nav>
+  
+<script type="text/javascript"></script>
+    <body>
+      
+        
+
+
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-lg-6" ><article>
+                              <form action="mailto:EnseignementMaineEtLoire@gmail.com" method="post" enctype="text/plain">
+                                Nom et Prénom <span class="glyphicon glyphicon-knight"></span> :<br>
+                                <input type="text" name="name"><br>
+                                E-mail <span class="glyphicon glyphicon-envelope"></span> :<br>
+                                <input type="text" name="mail"><br>
+                                Commentaire <span class="glyphicon glyphicon-comment"></span> :<br>
+                                <input type="text" name="comment" size="40"><br><br>
+                                <input type="submit" name="Send">
+                                <input type="reset" name="Reset">
+                              </form>
+                            </article></div>
+    <div class="col-lg-6" ><img src="https://i.skyrock.net/4628/96484628/pics/3317075932_1_7_P2vPI7oP.gif" alt="On vous attends" height="200" width="250" class="img-responsive"></div>
+  </div>
+  
+  <div class="row">
+   <br><br>
+     <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Informations</th>
+        <th>Longitude</th>
+        <th>Latitude</th>
+        <th>Hauteur</th>
+        <th>Largeur</th>
+        <th>Type d'appareil</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td><span id= "lon" /></td>
+        <td><span id= "lat" /></td>
+        <td><span id= "Hscreen" /></td>
+        <td><span id= "Wscreen" /></td>
+        <td><span id= "type" /></td>
+    
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  </div>
+</div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="container-fluid text-center">
+  <div class="container">
+ 
+ <div class="media">
+   <img src="Maine.png" class="align-self-start mr-3" style="width:260px" alt="alt">
+   <div class="media-body">
+     <h2>Vers le Post-Bac</h2>
+     <p> <h3>Le site de référence pour le listage d'établissements supérieur d'Anjou</h3></p>
+   
+   </div>
+ </div>
+  
+  
+   <div class="media">
+     <div class="media-left">
+       
+       <img src="Cloclo.jpg" class="media-object" style="width:70px" alt="alt">
+     </div>
+     <div class="media-body">
+       <h5 class="media-heading">Clovis Deletre</h5>
+       <p><h6>Etudiant en M1 MIASHS</h6></p>
+     <p><h6>Je parle couramment le lorem ipsum</h6>
+     </div>
+   </div>
+   <hr>
+   
+  
+   <div class="media">
+     <div class="media-body">
+       <h5 class="media-heading">Khadim MBENGUE</h5>
+       <p><h6>Etudiant en M1 MIASHS</h6></p>
+     <p><h6>Si j'avais eu ce site lors de mon choix d'Université, cela n'aurait rien changé puisque Parcoursup était déjà en place </h6></p>
+     </div>
+
+   </div>
+ </div>
+ 
+ </footer>
+   
+                
+                
+                
+                
+                
+                
+    </body>
+    
+    
+    
+    
+    <script>
+    
+document.getElementById("Hscreen").innerHTML=screen.height +" px";
+    document.getElementById("Wscreen").innerHTML=screen.width +" px";
+    
+    
+    
+    
+function maPosition(position) {
+var infopos = " ";
+infopos +=  position.coords.latitude ;
+var infopos2 = " ";
+infopos2 += position.coords.longitude;
+document.getElementById("lon").innerHTML = infopos;
+document.getElementById("lat").innerHTML = infopos2; 
+}
+if(navigator.geolocation)
+    navigator.geolocation.getCurrentPosition(maPosition)
+    
+    
+    
+    
+    
+    
+    
+    
+function detectmob() { 
+ if( navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)
+ ){
+    return true;
+  }
+ else {
+    return false;
+  }
+}
+if (detectmob()) {
+document.getElementById("type").innerHTML="Mobile";
+
+
+}
+else{document.getElementById("type").innerHTML="Ordinateur" ;}
+
+
+ </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</html>
